@@ -5,6 +5,12 @@
       <i-vaadin-home-o />
     </button>
 
+    <!-- 切换深色模式 -->
+    <button :title="t('button.toogle-dark-mode')" @click="theme.toggleDark()">
+      <i-ph-moon v-if="theme.dark" />
+      <i-ic-outline-wb-sunny v-else />
+    </button>
+
     <!-- 切换多语言 -->
     <button :title="t('button.change-languages')" @click="toggleLocales">
       <i-mdi-translate />
@@ -14,6 +20,7 @@
 
 <script lang="ts" setup>
   const router = useRouter();
+  const theme = useThemeStore();
   const { t, locale, availableLocales: locales } = useI18n();
 
   function toggleLocales() {

@@ -43,5 +43,4 @@
 name: Hello
 meta:
   layout: home
-  title: Hello
 </route>
