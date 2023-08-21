@@ -6,11 +6,5 @@
 </template>
 
 <script lang="ts" setup>
-  import { settings } from '@/settings';
-
   const theme = useThemeStore();
-
-  useHead({
-    title: settings.title,
-  });
 </script>
